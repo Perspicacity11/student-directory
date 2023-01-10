@@ -31,11 +31,10 @@ def print_header
 end
 
 def print(students)
-  if students[:name[0]] == "A"
-  students.each_with_index do |student, index| 
+  students.each_with_index() do |student, index|
+  unless student[:name][0] == "A"
   puts " #{index + 1}. #{student[:name]} (#{student[:cohort]} cohort)"
   end
-  else nil
   end
 end
 
