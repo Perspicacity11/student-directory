@@ -30,13 +30,17 @@ def print_header
   puts "-------------"
 end
 
+#REWRITE THIS WITH A LOOP
+
 def print(students)
-  students.each_with_index() do |student, index|
-  unless student[:name].length > 12 
-  puts " #{index + 1}. #{student[:name]} (#{student[:cohort]} cohort)"
-  end
-  end
+  loop = 0 
+  until loop >= students.length do 
+    puts "#{students[loop][:name]} (#{students[loop][:cohort]} cohort)"
+    loop += 1 
+  end 
 end
+
+# ----------------------------------------
 
 def print_footer(names)
   puts "Overall, we have #{names.count} great students"
